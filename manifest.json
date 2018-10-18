@@ -1,11 +1,11 @@
 {   //这里必须是2
     "manifest_version": 2,
     //扩展名称
-    "name": "QRcode tool",
+    "name": "ens protocol",
     //扩展版本
     "version": "1.0",
     //扩展描述
-    "description": "二维码生成工具",
+    "description": "用于解析 ens 协议页面的跳转",
     //扩展图标(在扩展中心显示)
     "icons": {
         // "16": "images/icon16.png",
@@ -16,12 +16,12 @@
     // "options_page": "options.html",//配置项页面
     //扩展图标配置
     "browser_action": {
-        "default_popup": "qrcode.html",
-        "default_titlec": "QRcode tool",
+        "default_popup": "main.html",
+        "default_titlec": "ens 协议解析跳转工具",
         "default_icon": {
             // "16": "images/icon16.png"
         }
     },
     //权限声明
-    "permissions":["tabs"]
+    "permissions":["tabs","https://node.eosflare.io/"]
 }
