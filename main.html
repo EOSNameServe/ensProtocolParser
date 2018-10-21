@@ -2,10 +2,16 @@
 <html>
 <head>
     <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
+    <link href="main.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    <input id="ensProtocolUrl" type="text" value="ens://" placeholder="text here" style="width:150px;" /><br />
+    <div class="input-group">
+        <span class="input-group-add">ens://</span>
+        <input id="ensProtocolUrl" class="input-group-input" type="text" value="" placeholder="在此输入地址"/>
+        <img class="loading" src="/img/loading.gif">
+    </div>
 </body>
 </html>
