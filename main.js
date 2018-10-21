@@ -5,13 +5,10 @@ $(document).ready(function(){
         currentWindow: true
         }, (tabs) => {
 
-        
-
         function goToTargetPage () {   
-            let inputUrl = $('#ensProtocolUrl').val() || ''
-            let contractName = inputUrl.substring(6)
+            let contractName = $('#ensProtocolUrl').val() || ''
             
-            if(inputUrl.includes('ens://') && contractName.length == '12'){
+            if(contractName.length == '12'){
                 let api = `https://node.eosflare.io/v1/chain/get_table_rows`
                 let parameters = {
                     "scope":contractName,// 用户输入的名字
@@ -19,6 +16,7 @@ $(document).ready(function(){
                     "table":"enstables",// 写死
                     "json":"true"// 写死
                 }
+                $('.loading').css('display','block')
                 $.ajax({
                     url : api,
                     type : 'POST',
@@ -37,7 +35,9 @@ $(document).ready(function(){
                             return
                         }
                     }
+                    $('.loading').css('display','none')
                 }).fail(function(err){
+                    $('.loading').css('display','none')
                 })
             }else {
                 alert('Unexpected Format')
