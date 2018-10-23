@@ -8,11 +8,7 @@ $(document).ready(function(){
         function goToTargetPage () {   
             let contractName = $('#ensProtocolUrl').val() || ''
             
-<<<<<<< HEAD
             if(contractName.length <= '12'){
-=======
-            if(contractName.length == '12'){
->>>>>>> b1ea5a4ac803e0394019a76c72fda8b7d29938e9
                 let api = `https://node.eosflare.io/v1/chain/get_table_rows`
                 let parameters = {
                     "scope":contractName,// 用户输入的名字
