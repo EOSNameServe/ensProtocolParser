@@ -3,7 +3,7 @@
 
 
 ## 下载
-[点此下载插件](ensProtocol.crx)
+[点此进入下载页](ensProtocol.crx)
 
 ![下载图示](img/download.jpg)
 
