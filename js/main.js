@@ -8,7 +8,7 @@ $(document).ready(function(){
         function goToTargetPage () {   
             let contractName = $('#ensProtocolUrl').val() || ''
             
-            if(contractName.length == '12'){
+            if(contractName.length <= '12'){
                 let api = `https://node.eosflare.io/v1/chain/get_table_rows`
                 let parameters = {
                     "scope":contractName,// 用户输入的名字
@@ -37,10 +37,11 @@ $(document).ready(function(){
                     }
                     $('.loading').css('display','none')
                 }).fail(function(err){
+                    alert(err)
                     $('.loading').css('display','none')
                 })
             }else {
-                alert('Unexpected Format')
+                alert('不能大于 12 位')
             }
         }
 
