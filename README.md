@@ -4,7 +4,8 @@
 
 ## 下载
 [点此下载插件](ensProtocol.crx)
-[下载图示](img/download.jpg)
+
+![下载图示](img/download.jpg)
 
 ## 使用实例
 ![示例](img/pluginUsage.gif)
